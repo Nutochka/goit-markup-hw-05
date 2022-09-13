@@ -16,7 +16,7 @@
                 <nav class="main-nav">
                     <a href="./index.html" class="logo link"><span>Web</span>Studio</a>
                     <ul class="list nav header">
-                        <li><a href="./index.html" class="list-nav link current">Студія</a></li>
+                        <li class="current-page"><a href="./index.html" class="list-nav link current">Студія</a></li>
                         <li><a href="./portfolio.html" class="list-nav link">Портфоліо</a></li>
                         <li><a href="" class="list-nav link">Контакти</a></li>
                     </ul>
@@ -47,7 +47,7 @@
         <section class="section hero">
             <div class="container-hero">
                 <h1 class="title-hero">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="button primary order">Замовити послугу</button>
+                <button type="button" data-modal-open class="button primary order">Замовити послугу</button>
             </div>
         </section>
         <!--перелік переваг-->
@@ -100,15 +100,30 @@
                 <h2 class="section-title">Чим ми займаємося</h2>
                 <!--фото контент-->
                 <ul class="list profile">
-                    <li>
-                        <img src="./images/box-1.jpg" alt="Людина друкує на клавіатурі" width="370"/>
-                    </li>
-                    <li>
-                        <img src="./images/box-2.jpg" alt="Телефон в руках людини" width="370"/>
-                    </li>
-                    <li>
-                        <img src="./images/box-3.jpg" alt="Планшет і стилус в руках людини" width="370"/>
-                    </li>
+                    <div class="list-profile-holder">
+                        <li>
+                            <img src="./images/box-1.jpg" alt="Людина друкує на клавіатурі" width="370"/>
+                        </li>
+                        <div class="profile-layer">
+                            <p>Десктопні додатки</p>
+                        </div>
+                    </div>
+                    <div class="list-profile-holder">
+                        <li>
+                            <img src="./images/box-2.jpg" alt="Телефон в руках людини" width="370"/>
+                        </li>
+                        <div class="profile-layer">
+                            <p>Мобільні додатки</p>
+                        </div>
+                    </div>
+                    <div class="list-profile-holder">
+                        <li>
+                            <img src="./images/box-3.jpg" alt="Планшет і стилус в руках людини" width="370"/>
+                        </li>
+                        <div class="profile-layer">
+                            <p>Дизайнерські рішення</p>
+                        </div>
+                    </div>
                 </ul>
             </section>
         </div>
@@ -275,42 +290,42 @@
                         <ul class="list-regulars">
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo-1"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo-2"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo-3"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo-4"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="cards-regulars">
                                 <a href="" class="cards-regulars-holder">
-                                    <svg class="icon-regulars" width="170px" height="92px">
+                                    <svg class="icon-regulars" width="106" height="60">
                                         <use href="./images/symbol-defs.svg#icon-Logo-5"></use>
                                     </svg>
                                 </a>
@@ -366,5 +381,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="close-button" width="11px" height="11px">
+                    <use href="./images/symbol-defs-3.svg#icon-close-button-2"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
